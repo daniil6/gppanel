@@ -1,5 +1,5 @@
 ADD_SOURCES(gppanel baseData.cpp gpLayer.cpp gpLineLayer.cpp
-    gpPanel.cpp gpSeries.cpp gpSizer.cpp mathplot.cpp)
+    gpPanel.cpp gpPointLegend.cpp gpSeries.cpp gpSizer.cpp mathplot.cpp)
 
 ADD_SUBDIRECTORY(math)
 ADD_SUBDIRECTORY(menu)
