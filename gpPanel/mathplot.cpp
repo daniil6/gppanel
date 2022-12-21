@@ -3849,8 +3849,13 @@ void mpWindow::SetColourTheme(const wxColour& bgColour, const wxColour& drawColo
 			axisPen.SetColour(axesColour);
 			(*li)->SetPen(axisPen);
 
-			mpScaleX* scale = dynamic_cast<mpScaleX*>(*li);
-			scale->SetTicksColour( axesColour );
+            mpScaleX* scaleX = dynamic_cast<mpScaleX*>(*li);
+            if(scaleX != nullptr)
+                scaleX->SetTicksColour(axesColour);
+
+            mpScaleY* scaleY = dynamic_cast<mpScaleY*>(*li);
+            if(scaleY != nullptr)
+                scaleY->SetTicksColour(axesColour);
 
 		}
 		else if ((*li)->GetLayerType() == mpLAYER_INFO) {
