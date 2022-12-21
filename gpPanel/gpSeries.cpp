@@ -32,6 +32,7 @@ gpSeries::~gpSeries( void )
 void gpSeries::DataPush( double x, double y )
 {
     m_Data.DataPush( x , y );
+    m_Data.Rewind();
 }
 
 
@@ -166,6 +167,7 @@ void gpSeries::SetPen( wxPen pen )
 void gpSeries::DataClear( void )
 {
     m_Data.DataClear();
+    m_Data.Rewind();
 }
 
 
