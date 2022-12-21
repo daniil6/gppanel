@@ -462,10 +462,13 @@ public:
         @return The info layer rectangle */
     const wxRect& GetRectangle() { return m_dim; };
 
+    void SetColourTheme(const wxColour& bgColour, const wxColour& textColour);
+
 protected:
     wxRect m_dim;           //!< The bounding rectangle of the box. It may be resized dynamically by the Plot method.
     wxPoint m_reference;    //!< Holds the reference point for movements
     wxBrush m_brush;        //!< The brush to be used for the background
+    wxColour m_text;        //!< The colour to be used for the text>
     int m_winX, m_winY;     //!< Holds the mpWindow size. Used to rescale position when window is resized.
 
     DECLARE_DYNAMIC_CLASS(mpInfoLayer)

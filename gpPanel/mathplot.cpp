@@ -236,6 +236,12 @@ wxSize mpInfoLayer::GetSize()
     return m_dim.GetSize();
 }
 
+void mpInfoLayer::SetColourTheme(const wxColour& bgColour, const wxColour& textColour)
+{
+    m_brush = wxBrush(bgColour);
+    m_text = textColour;
+}
+
 mpInfoCoords::mpInfoCoords(unsigned int x_labelType) : mpInfoLayer()		//LOGtest "unsigned int x_labelType" added
 {
     m_labelType = x_labelType;
