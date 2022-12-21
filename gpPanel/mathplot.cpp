@@ -4652,6 +4652,8 @@ mpPointLayer::mpPointLayer( mpLayer         *mplayer,
 }
 mpPointLayer::~mpPointLayer()
 {
+    for(auto& p : m_polygon)
+        delete p;
 }
 void mpPointLayer::SetSecondPoint(mpPointLayer* layer)
 {
@@ -4833,6 +4835,8 @@ void mpPointLayer::Plot(wxDC & dc, mpWindow & w)
         dc.SetBrush(m_brush);
         dc.SetPen(m_pen);
 
+        for(auto& p : m_polygon)
+            delete p;
         m_polygon.clear();
         //m_polygon.DeleteContents(true);
 
