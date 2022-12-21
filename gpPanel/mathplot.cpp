@@ -3130,7 +3130,7 @@ bool mpWindow::AddLayer( mpLayer* layer, bool refreshDisplay )
     if (layer != NULL) {
         m_layers.push_back( layer );
 
-        if( layer->IsPointLayer() ) SetLayerBottom(layer);
+        if( layer->IsPointLayer() ) SetLayerTop(layer);
 
     	if (refreshDisplay) UpdateAll();
     	return true;
